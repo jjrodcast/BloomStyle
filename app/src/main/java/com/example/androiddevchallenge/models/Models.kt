@@ -13,15 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.models
 
-import androidx.compose.ui.graphics.Color
+import androidx.annotation.DrawableRes
+import androidx.compose.ui.graphics.vector.ImageVector
 
-val pink100 = Color(0xFFFFF1F1)
-val pink900 = Color(0xFF3F2C2C)
-val white = Color(0xFFFFFFFF)
-val white850 = white.copy(alpha = .85f)
-val gray = Color(0xFF232323)
-val green900 = Color(0xFF2D3B2D)
-val green300 = Color(0xFFB8C9B8)
-val white150 = white.copy(alpha = .15f)
+data class PlantModel(@DrawableRes val resId: Int, val text: String, val description: String = "")
+data class OptionModel(val label: String, val icon: ImageVector)

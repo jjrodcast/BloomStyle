@@ -13,15 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.utils
 
-import androidx.compose.ui.graphics.Color
+import com.example.androiddevchallenge.R
 
-val pink100 = Color(0xFFFFF1F1)
-val pink900 = Color(0xFF3F2C2C)
-val white = Color(0xFFFFFFFF)
-val white850 = white.copy(alpha = .85f)
-val gray = Color(0xFF232323)
-val green900 = Color(0xFF2D3B2D)
-val green300 = Color(0xFFB8C9B8)
-val white150 = white.copy(alpha = .15f)
+object ResourcesProvider {
+
+    fun getBackground(isDarkMode: Boolean) =
+        if (isDarkMode) R.drawable.ic_dark_welcome_bg else R.drawable.ic_light_welcome_bg
+
+    fun getImage(isDarkMode: Boolean) =
+        if (isDarkMode) R.drawable.ic_dark_welcome_illos else R.drawable.ic_light_welcome_illos
+
+    fun getLogo(isDarkMode: Boolean) =
+        if (isDarkMode) R.drawable.ic_dark_logo else R.drawable.ic_light_logo
+}
